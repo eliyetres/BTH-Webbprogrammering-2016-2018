@@ -1,0 +1,39 @@
+body {
+    background-image: url("../img/cheese2.jpg");
+}
+h1 {
+    text-align: center;
+    color: brown;
+    font-family:  'Georgia', Arial, serif;
+    font-size: 3em;
+}
+p {
+    text-align: center;
+    color: black;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+}
+.content {
+    /* If #content position is absolute, the #baddie position will be given in reference to it's parent, which is #content
+     * Makes it easier to do collision calculations */
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    border: solid 1px #000;
+}
+
+.baddie{
+	position: absolute;
+	height: 50px;
+	width: 50px;
+
+	/* ASSIGNMENT
+	 * Change baddie image to your own baddie or character */
+	background: url("../img/Mouse.png");
+
+	background-size: 50px;
+}
+.baddie-left {
+    transform: rotateY(180deg);
+}
+

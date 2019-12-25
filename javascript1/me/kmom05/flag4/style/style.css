@@ -1,0 +1,122 @@
+/*! 
+ * Style sheet for country flags 
+ */
+h1 {
+	text-align: center;
+}
+
+h3 {
+	color: pink;
+}
+
+#content {
+	border: 1px solid black;
+	background-color: #eee;
+	padding: 2em;
+	margin: 0 auto;
+	height: 500px;
+	width: 800px;
+	border-radius: 30px;
+}
+
+
+body {
+  color: pink;
+}
+
+
+#content {
+	border: 1px solid black;
+	background-color: gray;
+	padding: 2em;
+	margin: 0 auto;
+	height: 1200px;
+	width: 800px;
+	border-radius: 30px;
+}
+
+.flag {
+	position: relative;
+	width: 300px;
+	height: 200px;
+}
+.flag2 {
+	position: relative;
+	width: 400px;
+	height: 200px;
+}
+.flag3 {
+	position: relative;
+	width: 320px;
+	height: 200px;
+}
+
+
+.romania {
+	background-color: #002B7F;
+}
+
+.romania .part1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 200px;
+	background-color: #FCD116;
+}
+
+.romania .part2 {
+	position: absolute;
+	top: 0;
+	left: 200px;
+	width: 100px;
+	height: 200px;
+	background-color: #CE1126;
+}
+
+.indonesia {
+	background-color: #FFFFFF;
+}
+
+.indonesia .part1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 100px;
+	background-color: #CE1126;
+}
+
+.latvia {
+	background-color: #9E3039;
+}
+
+.latvia .part1 {
+	position: absolute;
+	top: 75px;
+	left: 0;
+	width: 400px;
+	height: 50px;
+	background-color: #FFFFFF;
+}
+
+.sverige {
+	background-color: #006AA7;
+}
+
+.sverige .part1 {
+	position: absolute;
+	top: 80px;
+	left: 0px;
+	width: 320px;
+	height: 40px;
+	background-color: #FECC00;
+}
+.sverige .part2 {
+	position: absolute;
+	top: 0px;
+	left: 100px;
+	width: 40px;
+	height: 200px;
+	background-color: #FECC00;
+}

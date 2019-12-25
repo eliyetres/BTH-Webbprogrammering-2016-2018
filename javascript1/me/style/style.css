@@ -1,0 +1,43 @@
+body {
+    font-family: Georgia, Lora, serif;
+    line-height: 150%;
+    font-size: 1em;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-family:  "Georgia", Arial, serif;
+    font-size: 2em;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+h3 {
+    color: black;
+    font-family:  "Georgia", Arial, serif;
+    font-size: 1em;
+
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+p {
+    color: black;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    line-height: 150%;
+    font-size: 1em;
+}
+
+#container {
+    width: 100%;
+    margin: 0;
+}
+
+#content {
+    width: 50%;
+    min-width: 400px;
+    max-width: 800px;
+    margin: 0 auto 150px;
+}

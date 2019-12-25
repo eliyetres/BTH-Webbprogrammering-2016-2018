@@ -1,0 +1,55 @@
+redovisning
+
+1.1. För varje krav du implementerat, dvs 1-6, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
+1-3:
+
+Spelidé:
+Jag valde att göra ett klassiskt äventyrsspel. Jag började med att skissa på var rummen skulle vara i förhållande till varandra och var några av rummen skulle innehålla. Sen fyllde jag ut dem allt eftersom. Prologen skrivs ut på skärmen; spelaren vaknar upp i ett rum, hittar en följeslagare och fortsätter på äventyr. Istället för en spelledare valde jag att ha en följeslagare. Jag använde en json-fil för att strukturera rummen och vad de innehåller. Genom funktionerna kick, open etc har jag lagt in kriterier för om det kan öppnas eller gå sönder. Om man öppnar eller sparkar något kan det innehålla något nytt som man automatiskt plockar upp. Jag hade redan bestämt vad jag skulle göra och jag fick inte riktigt in att något skulle flyttas. Just nu skriver den bara ut att objektet flyttas lite åt sidan.
+
+Som kriterier för vissa av rummen har jag ett par minispel (dock inget av  spelen i krav 6)
+Gåtor: Jag har en dictionary med gåtor:svar som skrivs ut slumpmässigt. Spelaren får 3 chanser att gissa svaret och sedan en extra gåta om man misslyckas (här använde jag en del av 'Guess the number' från 'Invent your own computer games'). 
+Labyrint: Det tog lite för lång tid att skapa en "riktig" labyrint så jag har slumpmässiga rum och beskrivningar som genereras när man går. Objektet och kriterier för nästa rum fås också slumpmässigt.
+
+Kommandon:
+Kommandona --help, --version etc återanvände jag från Kmom6. Följeslagaren ger ledtrådar till vad man skall göra när man skriver 'clue' och '--cheat. Informationen ges direkt till spelaren i förstaperson. Allt är på engelska så jag bytte ut alla kommandon. Alla kommandon som går att skriva finns under --help.
+Jag bytte ut fram, bak etc mot vädersteck.
+
+När man börjar i rummet eller när man kommer in i ett nytt rum skrivs 'info' ut.
+Man kan få samma text igen om man skriver 'info'.
+Jag tog 'o' som kort för 'open' så 'b' är förkortning för 'object.'
+När man skriver 'object' får man en lista på objekt i rummet som går att hantera. Den skriver även vilken/vilka riktningar man kan gå. Det finns object som går att öppna eller sparka sönder. I json-objecktet lade jag in kriterier för varje rum och matchade mot inventory - om man inte har rätt saker med sig kan man inte fortsätta framåt. Så länge man har kvar sakerna i inventoryt kan man gå tillbaka. Jag tolkade 'clue' som att man inte får olika ledtrådar varje gång man skriver 'clue', utan olika ledtrådar för varje rum. Jag hade inte speciellt avancerade saker för spelaren att göra så varje ledtråd talar i princip om för spelaren vad som krävs för att komma vidare till nästa rum, men inte exakt hur man gör dem. Om man väljer att gå åt ett håll men inte uppfyller kriterier för rummet får man också en ledtråd till vad som saknas.
+
+Filer:
+roomsjson.json: Struktur av rum och deras innehåll.
+start.py: ascciibilder
+riddles.py : minispel
+companionpy: funktioner för följeslagare
+
+Till en början hade jag delat upp koden i fler filer. Jag skapade inventory som en tom lista och lyckades inte importera den mellan filerna så jag lade in det mesta i adventure.py.
+I övrigt känner jag att det hade varit lättare om jag hade byggt strukturen och alla funktioner som öppna, sparka först. Jag hade med en del undantag i min loop som jag tror jag hade kunnat skriva snyggare.
+
+Krav 4: Ryggsäck och inventarier (optionell)
+Inte implementerad. Inventory finns, men det går inte att använda eller slänga något från den.
+När man skriver 'open' så plockar man automatiskt upp något om det går.
+
+Krav 5: Spara eller Scrapa (optionell)
+
+
+6
+---
+1.2. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
+----
+
+Det tog väldigt lång tid att genomföra! Jag inser ju att jag hade kunnat göra något mycket enklare
+men jag ville ändå att det skulle vara kul att spela. Det som tog längst tid var att få ihop alla rum. Till en början hittade jag sidan http://usingpython.com/python-rpg-game/ (som i övrigt var väldig hjälpsam) och skrev rummen som en dictionary. Till slut blev det lite för rörigt och jag bytte till en json-fil. Jag använder SublimeText och med json-paket till fick jag texten färgkoordinerad, det blev mycket enklare att läsa. Jag fastnade lite i och med att jag inte hade använt json tidigare och det var mycket att sätta sig in i. Jag har inte riktigt fattat hur exceptions fungerar så vid fel har jag i princip bara testat mig fram. Det tog ett tag innan jag listade ut hur jag skulle få in minispelen. Jag hade allt i separata file från början men kunde inte komma på något bra sätt att lägga till saker i en lista efter att ha klarat spelen. Till sluta lade jag ihop det mesta i adventure.py
+
+Projektet var kul men det hade varit bra att ha lite extra tid på sig!
+
+
+
+
+
+_--
+1.3. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
+---
+Jag tycker att dbwebb är för rörigt. För varje kmom är det många filkar till deluppgifter, extrauppgifter och läsanvnisningar. Det är svårt att få en översikt över vad man skall göra och hur lång tid det kommer ta.

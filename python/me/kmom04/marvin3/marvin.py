@@ -1,0 +1,328 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+Marvin with a simple menu to start up with.
+Marvin doesnt do anything, just presents a menu with some choices.
+You should add functinoality to Marvin.
+
+"""
+import random
+
+def meImage():
+    """
+    Store my ascii image in a separat variabel as a raw string
+    """
+    return r"""
+               
+         /\___/\
+        (  o o  )
+        /   *   \
+        \__\_/__/
+          /   \
+         / ___ \
+         \/___\/
+    """
+
+
+def menu():
+    """
+    Display the menu with the options that Marvin can do.
+    """
+    print(chr(27) + "[2J" + chr(27) + "[;H")
+    print(meImage()) 
+    print("Hi, I'm Ada. I am Robot. What can I do you for?") 
+    print("1) Tell Ada your name.")
+    print("2) Tell Ada how long you have lived.")
+    print("3) Tell Ada how much you weigh.")
+    print("4) Round up minutes.")
+    print("5) Convert celsius to fahrenheit")
+    print("6) Multiply numbers")
+    print("7) Print random numbers.")
+    print("8) Calculate sum and mean.")
+    print("9) Ask for your grades.")
+    print("10) Play Guess The Number!") 
+    print("11) Play Shuffe String!")
+    print("12) Ask Ada how she feels.")
+    print("q) Quit.")
+
+
+
+def myNameIs():
+    """
+    Read the users name and say hello to Marvin.
+    """
+    name = input("What is your name? ")
+    print("\nAda says:\n")
+    print("Hello %s - your awesomeness!" % name)
+    print("What can I do you for?!")
+
+
+def ageInSeconds():
+    """
+    age in seconds KLAR
+    """
+    age = int(input("How old are you?"))
+    ageseconds = age * 31556926
+    print("You have lived for at least %d seconds! " % ageseconds)
+
+
+def moonWeight():
+    """
+    kg on the moon KLAR
+    """
+    kilogr = int(input("How many kg do you weight? "))
+    weight = kilogr / 6 
+    print("You would weigh %d kg on the moon!" % weight)
+
+def minutesHours():
+    """
+    minutes to hours 
+    """
+    minutesInput = int(input("Enter minutes: "))
+    hours = (minutesInput/60)
+    hoursRounded = round(minutesInput/60)
+    minutes = minutesInput - hours
+    print("That is %d hours and %d minutes!" % (hoursRounded, minutes))
+ 
+def celFahr():
+    """
+    C to F KLAR
+    """
+    celsius = float(input('Enter degree Celsius: '))
+    fahrenheit = (celsius * 9/5) + 32
+    print('%0.1f degree(s) Celsius is %0.1f degree(s) Fahrenheit' %(celsius, fahrenheit))
+
+
+def muliplyNum():
+    """
+    ask for word and number, print word x times KLAR
+    """
+    word, number = input("Enter a word and a number, separated by ONE space: ").split()
+    print((word + "\n") * int(number))
+
+
+
+def min_max():
+    """
+    ask for a min and a max nr and print 10 random numbers between them, in a list w/ commas 
+    """
+    mini, maxi = input("Enter two numbers: ").split()
+    list_var = []
+    for _ in range(10):
+        list_var.append(random.randint(int(mini), int(maxi)))
+    
+    print(list_var)
+
+
+
+def num_done():
+    """
+    Summa och medelvarde:  KLAR
+    """
+    list_num = []
+    while True:
+        line = (input("Enter one number at a time, type 'done' when you are ready: "))
+        if line == 'done':
+            break
+        else:
+            list_num.append(int(line))
+    print("Sum: %d mean: %0.2f " %(sum(list_num), sum(list_num)/len(list_num)))
+
+
+
+def scoreGrade():
+    """
+    Poang till betyg. Kika på ovning 3.3 i boken Python for everybody. 
+    """
+    maxPoint = input("What is the maximum possible points? :")
+    myPoint = input("How many points did you get? :")
+    try:
+        grade = float(myPoint)/float(maxPoint)
+    
+        if grade > 1:
+            print("Bad score")
+            scoreGrade()
+        elif grade >= 0.9: 
+            print('Your grade is: A')
+        elif grade >= 0.8:
+            print('Your grade is: B')
+        elif grade >= 0.7:
+            print('Your grade is: C')
+        elif grade >= 0.6:
+            print('Your grade is: D')
+        elif grade >= 0:
+            print('Your grade is: F')
+
+    except TypeError:
+        print("Bad grade")
+        scoreGrade()
+
+
+def randomGame(): 
+    """
+    This is a guess the number game.
+    """
+    
+    guessesTaken = 0
+    
+    number = random.randint(1, 100)
+    print('I am thinking of a number between 1 and 100.')
+    
+    while guessesTaken < 6:
+        print('Take a guess.') 
+        guess = input()
+        guess = int(guess)
+    
+        guessesTaken = guessesTaken + 1
+        
+        if guess < number:
+            print('Your guess is too low.') 
+        
+        if guess > number:
+            print('Your guess is too high.')
+        
+        if guess == number:
+            break
+        
+    if guess == number:
+        guessesTaken = str(guessesTaken)
+        print('Good job! You guessed my number in ' + guessesTaken + ' guesses!') 
+    if guess != number:
+        number = str(number)
+        print('Wrong! The number I was thinking of was ' + number)
+
+def moodstring():
+    """
+    print number, date, time and random mood, get function from file
+    """
+    #!/usr/bin/python
+    import mood
+    mood.mood()
+    
+
+def randstring():
+    """
+    shuffle a string
+    """
+    inputstring = input("Enter your text and: ")
+    print(''.join(random.sample(inputstring, len(inputstring))))
+
+
+def quoteinput():
+    """
+    get quote from file
+    """
+    file = open('quotes.txt').read().splitlines()
+    randomline = random.choice(file)
+    print(randomline)
+    input("\nPress enter to continue...")
+
+
+
+def main():
+    """
+    This is the main method, I call it main by convention.
+    Its an eternal loop, until q is pressed. 
+    It should check the choice done by the user and call a appropriate 
+    function.
+    """
+    while True:
+        menu()
+        choice = input("--> ").lower().split(' ')
+
+        if choice == "q":
+            print("Bye, bye - and welcome back anytime!")
+            return
+        elif "citat" in choice or "quote" in choice:
+            quoteinput()
+     
+        elif choice == "1":
+            myNameIs()
+
+        elif choice == "2":
+            ageInSeconds()
+
+        elif choice == "3":
+            moonWeight()
+
+        elif choice == "4":
+            minutesHours()
+
+        elif choice == "5":
+            celFahr()
+
+        elif choice == "6":
+            muliplyNum()
+
+        elif choice == "7":
+            min_max()
+
+        elif choice == "8":
+            num_done()
+
+        elif choice == "9":
+            scoreGrade()
+
+        elif choice == "10":
+            randomGame()
+        
+        elif choice == "12":
+            moodstring()
+
+        elif choice == "11":
+            randstring()
+
+
+        # INVENTORY
+        elif "inv" in choice and len(choice) == 1:
+            with open("inv.data", 'r+') as file:
+                content = file.read()
+                content2 = content.split()
+                if len(content) == 0:
+                    print("The inventory is empty.\n")
+                    input("\nPress enter to continue...")
+                else:
+                    print("I have {0} items in the inventory. The items are: {1}\n".format(len(content2), content))
+                    input("\nPress enter to continue...")
+                    
+        #pick up item
+        elif "pick" in choice[1]:
+            with open("inv.data", 'r') as file:
+                check = file.read()
+                check = check.split()
+            if choice[2] not in check:
+                with open('inv.data', 'a') as file:
+                    file.write(" {0}".format(choice[2]))
+                with open('inv.data', 'r') as file:
+                    newcont = file.read()
+                    print("I have picked up the {0}. The inventory now contains: {1}\n".format(choice[2], newcont))
+                    input("\nPress enter to continue...")
+                    
+        #drop item
+        elif "drop" in choice[1]:
+            with open("inv.data", 'r') as file:
+                check = file.read()
+                check2 = check.split()
+            if choice[2] in check2:
+                with open('inv.data', 'w') as file: 
+                    check2.remove(choice[2])
+                    file.write(" ".join(check2))                      
+                if len(check2) == 0:
+                    with open('inv.data', 'r') as file:
+                        print("I have dropped the {0}. The inventory is empty.\n".format(choice[2]))
+                        input("\nPress enter to continue...")
+                else:
+                    with open("inv.data", 'r') as file:
+                        newcont2 = file.read()
+                        print("I have dropped the {0}. The inventory now contains: {1}\n".format(choice[2], newcont2))
+                        input("\nPress enter to continue...")
+                        
+            else:
+                print("No such object in inventory.\n")
+                
+        
+        else:
+            print("That is not a valid choice. You can only choose from the menu.")          
+            input("\nPress enter to continue...")
+

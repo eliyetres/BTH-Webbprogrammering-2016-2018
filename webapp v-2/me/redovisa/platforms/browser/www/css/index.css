@@ -1,0 +1,215 @@
+/*
+ * CSS for MeApp
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:16px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+/*
+*  Layout Styles
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+/*
+    Header Styles
+*/
+h1 {
+    color: black;
+    font-family:  'Georgia', Arial, serif;
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:10px;
+
+    text-align:center;
+}
+h2 {
+    text-align: center;
+    color: black;
+    font-family:  'Georgia', Arial, serif;
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+h3 {
+    text-align: center;
+    color: black;
+    font-family:  'Georgia', Arial, serif;
+    font-size: 1em;
+    margin-top: 30px;
+    margin-top: 0px;
+}
+p {
+    text-align: center;
+    color: black;
+    font-family: 'Georgia', Arial, serif;
+}
+/*
+    Event Styles
+*/
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+/*
+    Picture Styles
+*/
+.elin {
+    background-image:url(../img/elin2.png);
+    border-radius: 50%;             /* rounded picture */
+    left:50%;                       /* centered picture */
+    top:50%;
+    width:80px;
+    height:80px;
+    margin-left: auto;
+    margin-right: auto
+
+}
+/*
+    Link Styles
+*/
+
+li a {
+    color: black;
+    display: block;
+    width: 60px;
+}
+
+a:link {
+    color: black;
+}
+a:hover {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    position:relative;
+    margin: 0;
+    padding: 0;
+}
+
+section.container {
+    list-style: none; /* Remove list bullets */
+    padding: 0;
+    margin: 0;
+}
+/*
+    Nav bar Styles
+*/
+.nav {
+  height: 40px;
+  width: 100%;
+  background-color: white;
+  font-size: 12pt;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  position: relative;
+  border-bottom: 2px solid black;
+
+  justify-content: center;
+}
+.nav ul {
+position:relative;
+  padding: 0 auto;
+  margin: 0 auto;
+  width: 700px;
+  height: 40px;
+  left:50%;
+    display: flex;
+  justify-content: center;
+}
+.nav li {
+  float: left;
+}
+
+.clearfix:before {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+.nav a {
+  color: black;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 40px;
+
+}
+
+.nav li a {
+  border-right: 1px solid black;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+.nav li:last-child a {
+  border-right: 0 ;
+}
+
+.nav a:hover, nav a:active {
+  background-color: #B57786;
+}
+
+.nav a .pull {
+  display: none;
+}

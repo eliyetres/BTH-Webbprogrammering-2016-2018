@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="sv">
+<meta charset="utf-8">
+<title>Redovisningar | Kursen linux</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<nav>
+    <a href="me.html">Om mig</a> |
+    <a href="report.html">Redovisning</a>
+</nav>
+
+<article>
+<div id="container" class="container">
+<div id="content" class="content">
+
+<h1>Redovisningar</h1>
+<a href="http://www.student.bth.se/~elhb16/dbwebb-kurser/javascript1/me/me.html">
+<img class="displayed elin" src="http://s.gravatar.com/avatar/e13d4db2ed0156810ec3bef75aaa7534?s=80" alt="Min me-sida" style=";border:0;">
+</a>
+<p>Av Elin, elhb16</p>
+
+
+
+<h2>Kmom01</h2>
+
+
+<p><b>Är du sedan tidigare bekant med Unix, Linux, Debian och/eller terminalen?</b>
+<br>
+Jag har bara använt Cygwin till Windows(7) i de tidigare kurserna Python och JavaScript. Jag har använt Fedora som operativsystsem för länge sedan men det är i princip all kontakt jag haft med Linux. Debian är helt nytt för mig.
+<br>
+<br>
+<b>Hur känns det med Unix-kommandon på terminalen, är det udda eller bekvämt?</b>
+<br>
+Det känns främst ovant. Jag har lite svårt att använda terminalen för Cygwin, jag tycker att det är svårt att se om jag skriver rätt. Jag brydde mig inte om att läsa speciellt mycket om kommandon när kurspaketet startade utan har i princip bara använt dbwebb-kommandon hittills. Jag har inte fått in nån vana så jag behöver kolla alla kommandon varje gång jag skall skriva något. Förhoppningsvis är det något som blir lättare senare :)
+<br>
+<br>
+<b>Valde du att köra standard med VirtualBox och Debian eller hur gjorde du?</b>
+<br>
+Jag installerade VirtualBox med Debian Jessie. Jag gick igenom alla delar i instruktionen till kursmomentet men det tog två gånger innan jag lyckades. Idén om att använda Raspberry Pi var kul, och jag hoppas kunna fixa det om jag har lite extra tid.
+<br>
+<br>
+<b>Var det något som krånglade eller tog extra mycket tid?</b>
+<br>
+Jag lyckades starta Debian första gången men konsolen visade bara markören utan att det gick att göra något. Programmet var igång men till syntes stod det stilla. Jag ominstallerade Debian, det är lite oklart vad som blev rätt andra gången men jag gissar att jag missförstod någon steg i installationen. Själva installationen tog ganska lång tid, men det var ju många steg i installationen som man skulle få rätt! Inställningarna för copy paste mellan Windows och Linux fungerade inte heller, jag gjorde som det står i instruktionen och vad jag kan se ser det rätt ut i inställningarna.
+Jag utgick från samma me-sida som jag skrev i JavaScript-kursen men vid valideringen kunde jag se att  jag  fick många felmeddelanden för CSSLint jag inte sett tidigare, till exempel att hellre använda .class än #id. Detta tog ytterligare tid att läsa om varför och hur det skulle rättas.
+<br>
+<img src="img/ssh.png" alt="cowsay">
+</p>
+
+
+<h2>Kmom02</h2>
+
+
+<p><b>Hur känns konceptet med Apache name-based Virtual Hosts? Känner du igen det sedan tidigare?</b>
+<br>Nej, jag har aldrig gjort något liknande tidigare. Detta är första gången jag arbetar med webbserver. Det känns väldigt svårt eftersom det är mycket man måste göra och att man måste göra allt i terminalen. Efter att gått genom alla steg runt 30 gånger känner jag dock att jag har lite bättre koll.
+<br>
+<br>
+<b>Det blir allt fler kommandon i terminalen, hur känns det med terminalen och dess kommandon?</b>
+<br>
+Det är svårt att komma ihåg alla. Jag har skapat ett ark med alla lösenord och "vanliga" kommandon. Något positivt med att göra fel är ju att man får göra om samma sak flera gånger och lär sig det lite bättre. Det går inte alls bra att jobba effektivt i manualen, mycket där är otydligt och till slut slutade jag använda den för att istället söka efter exempel på hur kommandon används.
+<br>
+<br>
+<b>Gick det bra med ssh-nycklar och rsync över ssh?</b>
+<br>
+Nej. Uppgiften tog fantastiskt lång tid eftersom jag var tvungen att installera en mängd saker för att komma åt kmom-mapparna. Jag hade bara linux-terminalen installerad och jag fick börja med att leta reda på rätt kernels för Debian som behövdes för att kunna köra VirtualBox GuestAdditions för att sedan kunna mounta filerna. Sen insåg jag även att jag behövde mounta igen efter omstart och jag inte hade skrivit ner alla kommandon…
+I den första övningen med localhost och dbwebb funkade allt bra, jag kunde kopiera nycklar och logga in utan problem. MEN när jag skulle skapa me.linux.se fick jag felmeddelandet "could not resolve hostname: name or service not known". Hade inget problem med apache-servern i sig. Fick hjälp av en kurskamrat som ändrade ip-adressen från 127.0.0.1 till 127.0.1.1. Felsökning på den sista övningen tog ca 8 timmar.
+<br>
+<br>
+<img src="img/dump.png" alt="dump" style="width:650px;height:440px;">
+<br>
+<b>Hur kändes det att jobba med tmux?</b>
+<br>
+Det tog ganska lång tid innan jag listade ut hur man skulle använda prefixet. De första gångerna hände ingenting och jag spenderade en del tid på att felsöka men det visade sig att jag hade använt piltangenterna på fel sätt. När jag listat ut det gick det snabbt att skapa nya fönster, stänga dem och att skifta mellan dem
+</p>
+
+
+<h2>Kmom03</h2>
+
+
+<p>
+<b>Tittade du på videoserien? Vad tyckte du om den?</b>
+<br>
+Om detta avser filmerna från dbwebb så började jag kolla på dem men kunde tyvärr inte höra mycket av vad som sades då det var väldigt låg volym.
+Jag kollade även på Kris Occhipintis serie om skriptprogrammering med Bash. Dessa var väldigt lätta att förstå och han förklarade väldigt bra och tydligt. Jag gillade att man fick en liten recap från föregående del i varje ny video.
+<br>
+<br>
+<b>Är detta din första bekantskap med skriptprogrammering och Bash?</b>
+<br>
+Just script i bash, ja. Vi gjorde dock en liknande uppgift i Python-kursen där vi skulle använda externa moduler till Python med pip för att skapa egna argument med getopts på kommandoraden. Där använde vi också exit-status t.ex där kommandot --help; echo $?  ger exit status 0.
+<br>
+<br>
+<b>Vilka möjligheter/utmaningar ser du med denna typen av skriptprogrammering?</b>
+<br>
+Det sparar ju mycket tid genom att bara köra ett script istället för att skriva det varje gång man vill använda det.
+<br>
+<br>
+<b>Hur många poäng fick du i uppgiften med irc-loggfilen?</b>
+<br>
+23/23 poäng! Nu i efterhand inser jag att man kanske inte behövde göra de sista uppgifterna. Jag hade redan bråkat lite med head och tail-kommandona så de sista uppgifterna var inte så svåra.
+<br>
+<b>Gjorde du extrauppgiften?</b>
+<br>
+Japp, det var ju mycket enklare en de obligatoriska uppgifterna!
+<br>
+<br>
+<b>Var det något som var extra svårt eller utmanande i uppgifterna?</b>
+<br>
+Jag tycker att detta kmom var det enklaste hittills! Allt gick förvånadsvärt bra och de fel jag fick var enkla att rätta. Själva syntaxen tog en stund att läsa på om, tyckte det var lite oklart med hur man använder olika operatörer eller enkla vs dubbla parenteser. Jag är inte helt med på om jag själv använt rätt. Hade lite problem med i vilket syfte man skulle använda @, $ eller *  . Har även begränsade mattekunskaper och fick lite hjälp med hur man skulle räkna ut primtalsfaktorer. Till uppgiften fick jag valideringsfel när jag använde ints och strings tillsammans och det slutade så här: while [ $((num%i)) -eq 0 ]; do.  I början använde jag många variabler direkt i printf men fick valideringsfel för att det borde skrivas separat med %s. När jag körde inspect på servern fick jag även fel på labben eftersom jag skrivit "irclog.txt" med litet l och det inte hittades. Scriptet funkade dock lokalt och med dbwebb validate. Den här gången stötte jag inte heller på några miljörelaterade problem som jag satt med i flera timmar i förra kmom.
+</p>
+
+
+<h2>Kmom04</h2>
+
+
+<p><b>Är detta din första bekantskap med JavaScript på servern eller har du testat det tidigare?</b>
+<br>Nej, jag har bara använt JavaScript tidigare och detta är första gången jag jobbar med en server över huvud taget.
+<br>
+<b>Vad tänker du om ECMA6, dess nya funktioner och sättet att få tillgång till dem via babel-node?</b>
+<br>Det gick smidigt att få tillgång till det. Skönt skönt att kunna använda let i stället för var i for loop, men svårt att använda function logAllArguments(...args) {  for (const arg of args) … nu när man i princip skriver arguments.length; i++ i sömnen.
+Pilfunktionerna känns jättebra använda eftersom koden blivit kortare när man bara vill skapa en funktion som returnerar något.
+<br>
+<b>Hur gick det att förstå koncepten kring klient och server?</b>
+<br>Jag hoppas det! Klienten skickar requests till serven och visar svaren man får- Servern lyssnar på anrop och skickar information tillbaka.
+<br>
+<b>Är du bekant med begreppet funktionell programmering och har du några tankar kring det?</b>
+<br>Den första programmeringen jag gjorde överhuvudtaget var Haskell som är inkluderat i Kognitionsvetenskapsprogrammet jag läser. Kursen lämnade mycket att önska då läraren bland annat refererade till mycket av programmeringen som "magi". Det jag gillar nu i efterhand med Haskell är att det var väldigt strukturerat även om man fick mycket fel och trots att man måste skriva väldigt mycket själv så förstår man lättare koden eftersom man inte behöver gissa vad koden  gör. Jag känner att jag har bra koll på currying, rekursion och high order functions men inte min kunskap är lite begränsad när det gäller monads och monoids. I kursen hade vi en analog salstenta så vi var tvungna att lära oss funktioner som t.ex. map eller filter utantill. I övrigt är det svårt att byta ut syntaxen när man är van vid vanliga JS.
+
+<br>
+<br>
+<b>Övrigt:</b>
+Det tog väldigt lång tid att rätta felen i koden. Det känns som att den var känsligare än tidigare, jag satt länge och ändrade trailing spaces och antalet mellanslag i indenteringar. Till slut hämtade jag ett pretty-print plugin till SublimeText som löste allt! Jag fick även felmeddelandet "unexpected token" vid import i filen server.js men kunde inte hitta någon lösning, såg även att fler fått samma fel. Hade också problem med att hitta node, endast nodejs funkade. Löste det med att skapa en symlink till /usr/bin/node efter att ha tittat i forumet. Jag fick även felmeddelandet  "The pid file is missing" när jag gjorde inspect, men filen finns i min mapp och den innehåller ett nummer.
+</p>
+
+
+<h2>Kmom05</h2>
+
+
+<p>
+Hur kändes det att bekanta sig med inbyggda nodejs moduler?
+<br>
+Svårt. Det kändes som att det fanns begränsad information med exempel på hur det skall användas. Dokumentationen var svårläst. Det var också svårt att hitta exempel när man hade fastnat med en uppgift.
+Jag använde import för modulerna istället för att lägga det i en variablen som det stod i uppgiften. Jag testade både med var, och const som det står i dokumentationen men jag fick felmeddelande i JSHint som jag använder till Sublimetext. Import fungerade utan problem.
+Jag fick problem när jag hade en gammal version av övningen men fick ok i forumet att använda den.
+<br>
+<br>
+Är du bekant med JSON API sedan tidigare?
+<br>
+Ja, jag använde JSON för att strukturera mitt program i Python-projektet. Jag tycker att det var avsevärt mycket lättare att hämta informationen man ville åt i Python. Här har jag suttit i många timmar och hamnat väldigt långt efter vilket känns tråkigt.
+<br>
+<br>
+Hur kändes det att skriva ett litet större bash-skript? Var det något som var mer eller mindre utmanande och tidskrävande?
+<br>
+Allt var jättesvårt. Det kändes inte alls som att jag hade den kunskap som krävdes för detta. Mycket tid gick åt för att testa och gissa mig fram till lösningar. I övrigt hade jag även problem med att uppdatera dbwebb, att använda node och babel-node. I princip allt har gått fel!
+<br>
+<br>
+Kikade du på källkoden till maze-servern? Har du några reflektioner kring den?
+<br>
+Ganska lätt att förstå, mitt problem var snarare att jag kände att jag hade begränsade kunskaper i bash. Jag kunde läsa av koden men hade ingen aning om hur jag skulle koppla det till bash-scriptet.
+<br>
+<br>
+Är du nöjd med din mazerunner? Gjorde du nåt speciellt som du vill lyfta fram?
+<br>
+Nej, jag känner mig ganska missnöjd, efter att ha suttit så många timmar utan att något har fungerat lyckades jag få till det med ganska många fullösningar. Jag känner bara att jag ville bli klar snabbt med uppgiften eftersom jag halkat efter!
+</p>
+
+
+<h2>Kmom06</h2>
+
+
+<p>
+Hur väl har du fått ordning på begreppen kring klient och server?
+<br>
+Jag förstår principen, men i den här delen var det svårt att lista ut vilken fil som gör vad. Jag tycker det är svårt att få en bra översikt när man delar upp kod i många filer, det är enklare att söka i en fil. I så fall delar jag hellre upp koden i efterhand. Det kanske var särskilt svårt här när man inte har skrivit koden själv och inte vet var man skall leta.
+<br>
+<br>
+Hur känns det att utveckla i Node.js och den asynkrona programmeringsmodellen?
+<br>
+Jag satt en stund och försökte förstå hur det fungerade, instruktionsvideorna hjälpte en del! Detta kmom gick relativt smärtfritt jämfört med det tidigare. Ett fel jag gjorde i början var att jag inte tänkte på att servern behövde startas om när jag ändrade kod i någon annan fil. Servern stannade även upp ett par gånger utan felmeddelande, listade ut att dessa gånger berodde på att x och y-positionerna inte var en int, så till slut blev jag trött och skrev parseInt() runt alla variabler.
+<br>
+<br>
+Gick det bra med dina CLI-program i Node.js, några reflektioner kring dem?
+<br>
+Till placeRandom-funktionen utgick jag från "/place/:x/:y". Detta var väl den uppgift som tog längst tid. Här hjälpte instruktionsfilmerna att förstå var jag skulle lägga funktionen. Till de andra uppgifterna hade jag redan det mesta färdigt från tidigare kmom. Till den sista delen klippte och klistrade jag lite i den existerande koden, jag använde getRandoytInclusive för att slumpa ut en placering och den färdiga gameBoard.getSize() för att få ut storleken på spelbrädet. Tyvärr hann jag inte göra extrauppgiften om att skapa en lite smartare spelare, nu är alla drag helt slumpmässiga.
+<br>
+<br>
+Gjorde du något extra i uppgiften, eller förändrade grundkoden i Gomoku-spelet?
+<br>
+Jag började kolla på uppgifterna, det hade varit väldigt kul! Kikade lite på ett exempel där man rekursivt kontrollerar om brickorna ligger i linje uppdelat på kolumn, rad eller diagonalt. Kanske något man kunde använda för att se vilken spelare som vunnit och för att placera brickan på "bäst" plats. Har tidigare programmerat en (fungerande) algoritm för spelet Towers of Hanoi i Haskell. Tyvärr fanns inte tid till detta om jag skall hinna med projektet också!
+<br>
+<br>
+Känner du dig sugen, och redo, på att skriva en deltagare till Gomocup?
+<br>
+Jag tycker det är kul med AI och kikade lite snabbt på texten, det hade varit jättekul att delta men tyvärr ligger jag redan efter så det får bli en annan gång.
+</p>
+
+<h2>Kmom07/10</h2>
+
+
+<p>
+För varje krav du implementerat, dvs 1-6, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
+
+Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
+
+Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
+</p>
+
+</div>
+</div>
+</article>
+
+</html>

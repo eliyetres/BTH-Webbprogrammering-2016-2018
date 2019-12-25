@@ -1,0 +1,9 @@
+Webbplats: 
+	lynx http://me.linux.se
+
+Kommandot för rsync:
+	rsync -av -e "ssh -p 2222" me.html elhb16@me.linux.se:/home/elhb16/vhosts/me.linux.se/htdocs
+
+Lynx:
+	lynx http://me.linux.se
+

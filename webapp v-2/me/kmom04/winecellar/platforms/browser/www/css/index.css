@@ -1,0 +1,270 @@
+/* CSS for Winecellar App */
+
+
+/*@import url('https://fonts.googleapis.com/css?family=Droid+Serif');*/
+
+body {
+    background-color: #2d2123;
+    color: white;
+    font-family: 'Droid Serif', serif;
+    -ms-text-size-adjust: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    padding: 0;
+    text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+/* Header Styles */
+
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+    overflow: visible;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 23px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+h3 {
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+p {
+    margin: 15px;
+}
+
+a {
+    color: white;
+    display: block;
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* Layout Styles */
+
+.flex-container {
+    margin: 0;
+    width: 100%;
+}
+
+.content {
+    margin: 0 auto 150px;
+    max-width: 800px;
+    min-width: 400px;
+    width: 50%;
+}
+
+.wineholder {
+    background-color: #332729;
+    border-radius: 25px;
+    max-width: 400px;
+    min-width: 200px;
+}
+
+.saveholder {
+    max-width: 300px;
+    min-width: 100px;
+    background-color: #583b3c;
+    border-radius: 25px;
+    margin: 25px;
+    opacity: 0;
+    padding: 10px;
+    -webkit-animation: fadeinout 4s ease forwards;
+    -moz-animation: fadeinout 4s ease forwards;
+    animation: fadeinout 4s ease forwards;
+}
+
+.saved {
+    font-size: 20px;
+    padding: 0;
+    text-align: center;
+    top: 50%
+}
+
+@-webkit-keyframes fadeinout {
+    50% {
+        opacity: 1
+    }
+}
+
+@keyframes fadeinout {
+    50% {
+        opacity: 1
+    }
+}
+
+
+/*Picture Styles*/
+
+img {
+    border-radius: 25px;
+    display: block;
+    height: auto;
+    margin: auto;
+    max-height: 100px;
+    max-width: 100px;
+    width: auto;
+}
+
+.profile_picture {
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 80px;
+    left: 50%;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    width: 80px;
+}
+
+
+/* Web form Styles */
+
+.label {
+    clear: left;
+    float: left;
+    font-size: 25px;
+    left: 50%;
+    margin: 0 0 0 10px;
+    padding-right: 10px;
+    padding-top: 12px;
+    text-align: right;
+    width: 85px;
+}
+
+input {
+    border-radius: 4px;
+    box-sizing: border-box;
+    /*   display: inline-block;*/
+    float: left;
+    font-size: 15px;
+    margin: 8px 0;
+    padding: 10px 18px;
+    resize: none;
+}
+
+input:focus:invalid {
+    background-color: #CCCCCC;
+}
+
+input:valid {
+    background-color: white;
+}
+
+input:required {
+    border: 2px solid #E1A04A;
+}
+
+.button {
+    background-color: beige;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    display: inline-block;
+    font-size: 16px;
+    left: 50%;
+    margin: 50px 15px 15px 15px;
+    padding: 5px 15px 5px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* Nav bar Styles */
+
+.nav {
+    background-color: white;
+    border-bottom: 2px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    height: 40px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.nav ul {
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 600px;
+}
+
+.nav li {
+    float: left;
+}
+
+.clearfix:before {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.nav a {
+    color: black;
+    display: inline-block;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+}
+
+.nav li a {
+    border-right: 1px solid black;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.nav li:last-child a {
+    border-right: 0;
+}
+
+.nav a:hover,
+nav a:active {
+    background-color: crimson;
+}
+
+.nav a .pull {
+    display: none;
+}
+
+.container {
+    list-style: none;
+    margin: 0;
+    /* Remove list bullets */
+    padding: 0;
+}
+
+.brand {
+    color: firebrick;
+}

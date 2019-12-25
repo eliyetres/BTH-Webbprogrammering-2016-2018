@@ -1,0 +1,39 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*element visas efter varann i en lång lista */
+
+.widget {
+    border: 2px solid #CCC;
+    box-sizing: border-box;
+    float: left;
+    height: 200px;
+    margin: 0 1.0% 10px;
+    padding: 10px;
+    width: 98.0%;
+}
+
+
+/*definera två kolumner för enheter större än x pixlar*/
+
+@media (min-width: 500px) {
+    .widget {
+        width: 48.0%;
+    }
+}
+
+@media (min-width: 700px) {
+    .widget {
+        width: 31.3333333333333%;
+    }
+}
+
+@media (min-width: 980px) {
+    .widget {
+        width: 23.0%;
+    }
+}

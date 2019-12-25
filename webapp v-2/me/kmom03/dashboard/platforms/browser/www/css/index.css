@@ -1,0 +1,152 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header Styles */
+
+h1 {
+    color: black;
+    font-family: 'Georgia', Arial, serif;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 0;
+    overflow: visible;
+    padding: 10px;
+    text-align: center;
+}
+
+h2 {
+    color: black;
+    font-family: 'Georgia', Arial, serif;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+h3 {
+    color: black;
+    font-family: 'Georgia', Arial, serif;
+    font-size: 1em;
+    margin-top: 15px;
+    text-align: center;
+}
+
+p {
+    color: black;
+    font-family: 'Georgia', Arial, serif;
+    margin-top: 0;
+    text-align: center;
+}
+
+a {
+    color: #1d79db;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+
+/* Widget styles */
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.widget {
+    border: 2px solid #CCC;
+    box-sizing: border-box;
+    flex: 0 0 98%;
+    float: left;
+    height: 250px;
+    margin: 0 1% 10px;
+    padding: 10px;
+}
+
+
+/* Media queries for .widget dependent on screen size*/
+
+@media (min-width: 500px) {
+    .widget {
+        flex: 0 0 48.0%;
+    }
+}
+
+@media (min-width: 700px) {
+    .widget {
+        flex: 0 0 31.3333333333333%;
+    }
+}
+
+@media (min-width: 980px) {
+    .widget {
+        flex: 0 0 23.0%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .widget {
+        flex: 0 0 18%;
+    }
+}
+
+
+/* Calendar styles */
+
+.day {
+    border: 1px solid #CCC;
+    box-sizing: border-box;
+    margin: 0 1.0% 10px;
+    padding: 10px;
+    width: 98%;
+}
+
+.red-day {
+    background-color: #FFAAAA;
+}
+
+
+/*Picture Styles*/
+
+img {
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+}
+
+.elin {
+    background-image: url(../img/elin2.png);
+    border-radius: 50%;
+    height: 80px;
+    left: 50%;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    width: 80px;
+}
+
+.profile_picture {
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 80px;
+    left: 50%;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    width: 80px;
+}

@@ -1,0 +1,156 @@
+/*
+ * Style sheet for Nobel App
+ */
+
+body {
+    -webkit-touch-callout: none;
+    /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color: #E4E4E4;
+    background-attachment: fixed;
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Libre Baskerville'), local('LibreBaskerville-Regular'), url(https://fonts.gstatic.com/s/librebaskerville/v4/pR0sBQVcY0JZc_ciXjFsKwHlCYWexZJCPRz1QQ0uKVU.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+    height: 100%;
+    width: 100%;
+}
+
+
+/*Text styles*/
+
+h1 {
+    font-size: 35px;
+    font-weight: 700;
+    overflow: visible;
+    text-align: center;
+    padding: 30px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px;
+    overflow: visible;
+    text-align: center;
+}
+
+p {
+    font-size: 12px;
+    font-weight: normal;
+    overflow: visible;
+    margin: 15px;
+}
+
+
+/*Links*/
+
+a {
+    color: #598ac1;
+    text-decoration: none;
+}
+
+
+/*List of years*/
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+/*List of laureates*/
+
+ol {
+    list-style-type: none;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+
+/*Style classes*/
+
+.quote {
+    font-family: 'Libre Baskerville';
+    font-style: italic;
+    font-weight: 400;
+    margin: 10px;
+    src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'), url(https://fonts.gstatic.com/s/librebaskerville/v4/QHIOz1iKF3bIEzRdDFaf5aL70jAX4bHURgRIcBKzZwI.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+.bold {
+    font-family: 'Libre Baskerville';
+    font-style: normal;
+    font-size: 24px;
+    margin: 15px;
+    margin-top: 40px;
+    src: local('Libre Baskerville Bold'), local('LibreBaskerville-Bold'), url(https://fonts.gstatic.com/s/librebaskerville/v4/kH7K4InNTm7mmOXXjrA5v6y7YSlLHrWsjpD3RcrnyFM.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+    text-align: center;
+    border-top: 1px solid DarkGray;
+    border-width: 1px 10px 1px 20px;
+    padding-top: 30px;
+}
+
+.nobelicon {
+    background-color: #598ac1;
+    background-image: url("../img/nobel_gold.jpg");
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+
+/*Media*/
+
+@keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+
+/* Landscape layout (with min-width) */
+
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position: left center;
+        padding: 75px 0 75px 170px;
+        /* padding-top + padding-bottom + text area = image height */
+        margin: -90px 0 0 -198px;
+        /* offset vertical: half of image height */
+        /* offset horizontal: half of image width and text area width */
+    }
+}

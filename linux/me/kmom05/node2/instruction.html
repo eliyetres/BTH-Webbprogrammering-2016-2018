@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lab 4 - JavaScript with Nodejs</title>
+<style>
+body {
+    margin: 8px auto;
+    max-width: 700px;
+}
+
+div.answer {
+  font-family: "Courier New", monospace;
+  white-space: pre;
+  margin-bottom: 1em;
+}
+
+.fail {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+table, th, td {
+    border: 1px solid #666;
+}
+
+code {
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 1px;
+}
+
+pre code {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+</style>
+</head>
+<body>
+
+<pre>
+type
+linux
+node2
+elhb16
+2017-02-07 17:17:53
+v2.2.28* (2017-02-01)
+</pre>
+
+<p><i>Generated 2017-02-07 18:17:53 by <a href="https://github.com/mosbth/lab">dbwebb lab-utility</a> v2.2.28* (2017-02-01).</i></p>
+<hr>
+
+<h1>Lab 4 - JavaScript with Nodejs</h1>
+<p>JavaScript using nodejs. These exercises are directed at the <a href="https://nodejs.org/api/">nodejs api</a> and how to use the api documentation during coding.</p>
+
+
+<h2>1. Filesystem</h2>
+<p>This section is about the built-in module filesystem and how to read files synchronously.</p>
+
+
+<h3>Exercise 1.1</h3>
+<p>Start by requiring the filesystem module <code>fs</code> and assign the module to a variable called <code>fs</code>.</p>
+
+<p>Use the new <code>fs</code> variable and the function <code>readFileSync</code> to read the entire <code>ircLog.txt</code> in UTF-8 encoding into a variable. Answer with the number of characters in the file.</p>
+
+
+
+
+
+
+<h3>Exercise 1.2</h3>
+<p>Use your variable from the exercise above and answer with the contents on line 4.</p>
+
+
+
+
+
+
+<h3>Exercise 1.3</h3>
+<p>Write line number 4 of <code>ircLog.txt</code> to a new file synchronously that you create called <code>highlights.txt</code>. Replace <code>highlights.txt</code> if it already exists.
+Answer with characters 7 through 10 from <code>highlights.txt</code>.</p>
+
+
+
+
+
+
+
+<h2>2. querystring</h2>
+<p>This section is about the built-in module querystring and how to parse query strings.</p>
+
+
+<h3>Exercise 2.1</h3>
+<p>Start by requiring the querystring module <code>querystring</code> and assign the module to a variable called <code>querystring</code>.</p>
+
+<p>Use the new <code>querystring</code> variable and to parse to parse a query string &#8216;first_name=Pete&amp;last_name=Conrad&amp;mission=Apollo12&#8217;. Answer with the the value of mission.</p>
+
+
+
+
+
+
+<h3>Exercise 2.2</h3>
+<p>Use the parsed query string from above to concatenate the astronaut&#8217;s fullname with the string &#8217; was on the &#8217; and the mission that the astronaut was on.</p>
+
+
+
+
+
+
+<h3>Exercise 2.3</h3>
+<p>Create a javascript object with the following attributes and values:</p>
+
+<pre><code class="json">url = https://dbwebb.se/
+id = 17
+payload = aHR0cHM6Ly9kYndlYmIuc2Uv
+type = json
+
+</code></pre>
+
+<p>Encode the javascript object as a querystring.</p>
+
+
+
+
+
+
+
+<h2>3. crypto</h2>
+<p>This section is about the built-in module crypto and how to encrypt and decrypt data with nodejs.</p>
+
+
+<h3>Exercise 3.1</h3>
+<p>Start by requiring the crypto module <code>crypto</code> and assign the module to a variable called <code>crypto</code>.</p>
+
+<p>Use the new <code>crypto</code> variable to create a hash of &#8216;So close, no matter how far&#8217; using the <code>sha256</code> algorithm.</p>
+
+<p>Answer with a digest of the hash in <code>hex</code> format.</p>
+
+
+
+
+
+
+<h3>Exercise 3.2</h3>
+<p>Create an array called <code>cryptoStrings</code> holding the strings &#8216;So close, no matter how far&#8217;, &#8216;Couldnt be much more from the heart&#8217;, &#8216;Forever trusting who we are&#8217;, &#8216;And nothing else matters&#8217;.</p>
+
+<p>Use filter to create an array only containing elements that has the string &#8216;nothing else matters&#8217; in them.</p>
+
+<p>Answer with the array.</p>
+
+
+
+
+
+
+<h3>Exercise 3.3</h3>
+<p>Use the array from above only containing elements with &#8216;nothing else matters&#8217;.</p>
+
+<p>For the elements in the array create a hex digest of a hash created with with the <code>sha256</code> algorithm of each element.</p>
+
+<p>Answer with the array of hashes.</p>
+
+
+
+
+
+
+<h3>Exercise 3.4</h3>
+<p>Using <code>cryptoStrings</code> create a hash of the elements containing both an &#8216;i&#8217;, an &#8216;e&#8217; and a &#8216;m&#8217;, check both capital and non-capital letters.</p>
+
+<p>For the remaining elements create a hex digest of a hash created with with the <code>sha256</code> algorithm of each remaining element.</p>
+
+<p>Answer with the array of hashes.</p>
+
+
+
+
+
+
+<h3>Exercise 3.5</h3>
+<p>Using the same <code>cryptoStrings</code> array from above, create a hash of the elements containing &#8216;matters&#8217;, check both capital and non-capital letters.</p>
+
+<p>For the remaining elements create a HMAC using the <code>sha256</code> algorithm and the secret &#8216;metallica&#8217; for each element. Create a <code>base64</code> digest of the HMAC for each element.</p>
+
+<p>Answer with the array of HMACs.</p>
+
+
+
+
+
+
+
+<hr>
+<code>type</code>
+
+</body>
+</html>

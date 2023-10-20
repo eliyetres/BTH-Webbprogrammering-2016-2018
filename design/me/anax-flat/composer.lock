@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "f6e86f0d67ec40429b3c857354b990e5",
@@ -266,30 +266,41 @@
         },
         {
             "name": "mos/cimage",
-            "version": "v0.7.9",
+            "version": "v0.7.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mosbth/cimage.git",
-                "reference": "f250f7dff9123cfb84c6b60d6ee2820d9e8debe1"
+                "reference": "1411adc828e46b9a383f2286944454c8fc99f9e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mosbth/cimage/zipball/f250f7dff9123cfb84c6b60d6ee2820d9e8debe1",
-                "reference": "f250f7dff9123cfb84c6b60d6ee2820d9e8debe1",
+                "url": "https://api.github.com/repos/mosbth/cimage/zipball/1411adc828e46b9a383f2286944454c8fc99f9e0",
+                "reference": "1411adc828e46b9a383f2286944454c8fc99f9e0",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3"
             },
+            "suggest": {
+                "ext-curl": "*",
+                "ext-exif": "*",
+                "ext-gd": "*",
+                "ext-imagick": "*"
+            },
             "type": "library",
             "autoload": {
+                "files": [
+                    "defines.php",
+                    "functions.php"
+                ],
                 "classmap": [
                     "CImage.php",
                     "CHttpGet.php",
                     "CRemoteImage.php",
                     "CWhitelist.php",
                     "CAsciiArt.php",
-                    "CCache.php"
+                    "CCache.php",
+                    "CFastTrackCache.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -311,7 +322,12 @@
                 "image",
                 "imageprocessing"
             ],
-            "time": "2015-12-07T15:02:17+00:00"
+            "support": {
+                "docs": "http://dbwebb.se/opensource/cimage",
+                "issues": "https://github.com/mosbth/cimage/issues",
+                "source": "https://github.com/mosbth/cimage/tree/master"
+            },
+            "time": "2020-05-06T07:51:12+00:00"
         },
         {
             "name": "mos/ctextfilter",
@@ -473,5 +489,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
